@@ -1,7 +1,7 @@
 # Filterable Gallery using Vanilla JavaScript.
 
-#### Using Technology
---
+#### 📢 Using Technology
+---
   ✔ HTML5
   ✔ CSS3
   ✔ JavaScript
@@ -14,9 +14,11 @@
   Thnaks Here Is live Link:  [Click Here]()
   
   ### Here demo Screenshoot 
-  
-  ![image]();
+  ---
+  ![Screenshot Image]();
     
   
   
 Filterable Gallery Using Vanilla JavaScript.
+
+> Thanks for visiting in my github Account.
