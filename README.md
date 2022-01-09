@@ -1,6 +1,6 @@
 # Filterable Gallery using Vanilla JavaScript.
 
-#### 📢 Using Technology
+### 📢 Using Technology
 ---
   ✔ HTML5
   ✔ CSS3
