@@ -12,15 +12,136 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Poppins',sans-serif;
+body {
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #34495e;
+    background: #34495e
 }
-h1{
-    color: #fff;
+
+
+
+/* common class  */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Stylesheet Design Start  */
+#filter{
+    padding: 3rem 0rem;
+    position: relative;
+}
+.filter-inner h1{
+      background: #fff;
+      border-radius: 4px;
+      padding: .4rem 1rem;
+      font-weight: 500;
+      color: #2c3e50;
+}
+.filter-inner .filter-btn-groups {
+    position: relative;
+    margin: 2rem 0rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.filter-btn-groups li {
+    padding: .6rem 1rem;
+   background: #ffffff;
+   box-shadow: 20px 20px 60px #2c3e50,
+   -20px -20px 60px #3c546c;
+    cursor: pointer;
+    margin: .5rem;
+    border-radius: 2px;
+}
+.filter-btn-groups li.active{
+    background: #2ecc71;
+    color: #ffffff;
+}
+
+.filterable-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+.filterable-content .single-content{
+    position: relative;
+   border-radius: 14px;
+   background: #ffffff;
+   box-shadow: 20px 20px 60px #2c3e50,
+   -20px -20px 60px #3c546c;
+    padding: .8rem;
+}
+.single-content img{
+    border-radius: 14px;
+}
+
+.details{
+    position: relative;
+    padding: .5rem;
+}
+.details .name-price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .4rem 0rem;
+    font-weight: 500;
+}
+.name-price span{
+    display: block;
+    font-size: 1.1rem;
+}
+.price{
+    color: #2ecc71;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.buy-now{
+    padding: .4rem 1rem;
+    border: none;
+    outline: none;
+    background: #2ecc71;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins',sans-serif;
+    font-size: .9rem;
+    transition: all 0.3s ease;
+}
+.buy-now:hover{
+    background: #1ea356;
+}
+.buy-now:active{
+    transform: translateY(5px);
+}
+
+
+/* responsive  */
+@media (max-width: 1600px) {
+    .container {
+        max-width: 100%;
+        padding: 0rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .filterable-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 420px) {
+    .filterable-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
