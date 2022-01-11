@@ -2,12 +2,31 @@
 
 // selector 
 const filterBtns = document.querySelectorAll(".filter-btn-groups li"),
-    box = document.querySelectorAll(".single-content");
+    boxs = document.querySelectorAll(".single-content");
 
 
 // work with filter btn 
 filterBtns.forEach(btn => {
     btn.addEventListener("click", function () {
-        alert("Site is Under construction! Thanks");
+        let btnName = btn.getAttribute("id");
+        btn.classList.add("active");
+        filterBtns.forEach(btnItem => {
+            if (btn !== btnItem) {
+                btnItem.classList.remove("active");
+            }
+        })
+        boxs.forEach(box => {
+            box.style.display = "none";
+            let name = box.getAttribute("data-name");
+            box.classList.remove("active-now");
+            if (name === btnName) {
+                box.classList.add("active-now");
+                box.style.display = "block";
+            } else if (btnName === "All") {
+                box.classList.remove("active-now");
+                box.style.display = "block";
+            }
+        })
+
     })
 })
